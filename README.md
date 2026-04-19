@@ -16,6 +16,16 @@
 
 ---
 
+## 前端页面展示
+文献上传区
+<img width="1421" height="774" alt="e68f7b2fc5c4bbf57091cf515a485d5d" src="https://github.com/user-attachments/assets/a303bb0c-e1a5-45a5-93e9-670c89840560" />
+解析展示区
+<img width="1348" height="870" alt="41baa87186596c97061bac6aa038d1e2" src="https://github.com/user-attachments/assets/bcbd171f-baf1-4ce8-b48d-8fc3d977958e" />
+精读分析与问答区
+<img width="1345" height="897" alt="1f77a9cee9adb9644f1d8d858f9a095d" src="https://github.com/user-attachments/assets/9603686e-bc39-4575-bf67-88e5db13ab81" />
+
+---
+
 ## 核心功能
 
 ### 1. PDF 上传与结构化解析
