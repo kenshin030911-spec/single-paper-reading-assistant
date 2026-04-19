@@ -1,0 +1,7 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+mineru[pipeline]==3.0.9
+httpx==0.28.1
+huggingface-hub==0.36.0
+PyMuPDF==1.27.2.2
