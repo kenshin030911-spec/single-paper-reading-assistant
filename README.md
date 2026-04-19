@@ -237,6 +237,52 @@ backend/
 
 ---
 
+## 项目流程图
+
+下面这张图对应当前项目的主链路。更细的拆分版本可以看 [docs/project-flowchart.md](./docs/project-flowchart.md)。
+
+```mermaid
+flowchart LR
+    U[用户] --> FE[前端 React + Vite]
+
+    FE -->|上传 PDF| UP["POST /upload"]
+    FE -->|生成精读分析| AN["POST /analyze"]
+    FE -->|论文问答| ASK["POST /ask"]
+    FE -->|公式图片 fallback| EQ["GET /equation-image/{paper_id}/{equation_id}.png"]
+
+    UP --> SHA[计算 PDF SHA-256]
+    SHA --> CACHE{命中 parse_cache?}
+    CACHE -->|是| RESTORE[恢复 source.pdf 和 mineru_assets]
+    CACHE -->|否| MINERU[MinerU 解析 PDF]
+    MINERU --> STORE[保存 current_paper 与 parse_cache]
+    RESTORE --> STORE
+    STORE --> EMBED[best-effort 生成 section embeddings]
+    EMBED --> FE
+
+    AN --> PAPER1[读取 current_paper.json]
+    PAPER1 --> ANALYSIS_CACHE{命中 current_analysis?}
+    ANALYSIS_CACHE -->|是| ANALYSIS_RESULT[返回分析缓存]
+    ANALYSIS_CACHE -->|否| OLLAMA_ANALYZE[Ollama 生成结构化分析]
+    OLLAMA_ANALYZE --> SAVE_ANALYSIS[保存 current_analysis.json]
+    SAVE_ANALYSIS --> ANALYSIS_RESULT
+    ANALYSIS_RESULT --> FE
+
+    ASK --> PAPER2[读取 current_paper.json]
+    PAPER2 --> ROUTER[section embeddings 路由]
+    ROUTER --> RERANK[block 精排 / 公式窗口拼接]
+    RERANK --> OLLAMA_ASK[Ollama 生成回答]
+    OLLAMA_ASK --> FE
+
+    EQ --> EQ_SERVICE[Equation Image Service]
+    EQ_SERVICE --> EQ_CACHE{已有 equations PNG 缓存?}
+    EQ_CACHE -->|是| EQ_RESULT[直接返回 PNG]
+    EQ_CACHE -->|否| EQ_BUILD[从 mineru_assets 或当前 PDF 裁剪]
+    EQ_BUILD --> EQ_RESULT
+    EQ_RESULT --> FE
+```
+
+---
+
 ## 主要数据流
 
 ### 1. 上传 PDF
@@ -367,4 +413,3 @@ backend/
 2. 为 analyze 增加“关键章节深讲”
 3. 为 section embeddings 增加 `pdf_sha256` 级别缓存
 4. 扩大公式相关问题的局部上下文窗口
-
