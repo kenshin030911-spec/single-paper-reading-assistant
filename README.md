@@ -380,7 +380,7 @@ flowchart LR
 - `section_only`：section 路由
 - `full`：section 路由 + block 精排
 
-实验详细打分与结果汇总表见 [docs/results.xlsx](./docs/results.xlsx)等。
+实验详细打分与结果汇总表见 [docs/results.csv](./docs/results.csv)等。
 这个表用于补充结论性描述，包含本轮小规模人工评测中不同问答模式的对比结果，便于单独查看具体评分与汇总数据。
 
 ### 主要观察
