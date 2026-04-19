@@ -1,0 +1,4 @@
+mode,sample_count,avg_relevance,avg_specificity,avg_evidence,avg_usefulness,avg_total_score,cannot_confirm_rate,avg_latency_seconds
+global,4,3,2.75,2.25,2.5,10.5,0.25,130.2405
+section_only,4,4,3.5,3.5,3.75,14.75,0,111.40474999999999
+full,4,3.75,4,3.5,3.75,15,0,149.25900000000001

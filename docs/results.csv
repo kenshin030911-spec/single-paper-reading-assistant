@@ -1,0 +1,120 @@
+paper_id,paper_title,question_id,question_type,mode,used_mode,status,question_text,matched_sections,answer_text,latency_seconds,error_message,relevance_score,specificity_score,evidence_score,usefulness_score,total_score,cannot_confirm,routing_correct,notes,json_file,error_file
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q01,概览,global,global,success,这篇论文的核心研究问题是什么？,,"这篇论文的核心研究问题是：**如何利用生物启发策略和基于航向的控制方法，实现无人机群对静态或移动目标的包围控制，确保包围形状和尺寸的预定要求。**
+
+**证据：**
+1. **生物启发策略**：论文分析了哈里斯鹰等动物的合作捕猎行为（如“七杀”行为），提出了一种生物启发的包围策略，强调利用航向信息（bearing information）进行包围和收缩。
+2. **基于航向的控制方法**：论文设计了一个**基于航向刚度的框架**，确保仅通过航向信息即可唯一确定包围形状。同时，提出了两种控制律（针对静态和移动目标），这些控制律依赖于航向信息和单一距离测量（领导者无人机可感知到目标的距离）。
+3. **控制目标**：论文明确指出，其方法旨在通过航向信息和距离测量，驱动无人机群形成预定形状和尺寸的包围结构，适用于静态和移动目标。
+
+**总结**：论文的核心问题在于结合生物启发行为模式与基于航向的控制理论，解决无人机群在复杂环境中实现高效、鲁棒的包围控制问题。",120.668,,4,3,3,3,13,否,不适用,概括到位，但贡献表述与论文原文相比略泛，证据引用偏宽。,3eefa2bbd87e480b85688c5200afba87_Q01_global.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q01,概览,section_only,section_only,success,这篇论文的核心研究问题是什么？,A. Target Enclosing Bearing Rigidity Framework | I. INTRODUCTION | IV. BIOINSPIRED BEARING–BASED TARGET ENCLOSING CONTROL METHOD,"这篇论文的核心研究问题是：**如何利用无人机群实现对静态或移动目标的包围，并确保包围形成的几何形状和尺寸由仅基于无人机间航向信息的约束唯一确定**。
+
+**证据**：  
+1. 论文摘要明确指出，研究旨在解决无人机群的目标包围问题，并提出了一种基于航向的生物启发包围策略，通过航向信息和单距离测量实现预定形状和尺寸的包围。  
+2. 在章节 **A. Target Enclosing Bearing Rigidity Framework** 中，作者设计了基于航向刚度的框架，利用航向信息唯一确定包围形状，并引入了Laman图和Henneberg操作等理论工具来支持这一目标。  
+3. 论文强调了控制方法的有效性，通过数值模拟和实验验证，进一步证明了基于航向的包围控制的可行性。",107.072,,4,3,3,3,13,否,是,抓住“变编队策略+改进PIO”两点主贡献，但少写了与传统算法对比的验证表述。,3eefa2bbd87e480b85688c5200afba87_Q01_section_only.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q01,概览,full,full,success,这篇论文的核心研究问题是什么？,A. Target Enclosing Bearing Rigidity Framework | I. INTRODUCTION | IV. BIOINSPIRED BEARING–BASED TARGET ENCLOSING CONTROL METHOD,"这篇论文的核心研究问题是：如何利用生物启发策略和基于方位角的控制方法，实现无人机群对静态或移动目标的包围，确保包围形状和尺寸的预定特性。
+
+**证据：**
+1. **摘要**：明确指出论文针对无人机群目标包围的挑战，提出了一种生物启发的策略和基于方位角的控制方法，确保包围形状仅通过方位角信息即可唯一确定，并利用方位角和单一距离测量实现预定形状和尺寸。
+2. **引言**：提到目标包围是无人机群的代表性应用，论文通过分析生物协作捕猎行为，提出了一种生物启发的包围策略。
+3. **方法部分**：设计了方位角刚度框架，确保仅通过方位角信息即可唯一确定包围形状，并提出了基于方位角和单一距离测量的控制律，适用于静态和移动目标。
+
+综上，论文的核心问题聚焦于通过生物启发的方位角控制方法，实现无人机群对目标的有效包围。",97.658,,4,4,4,4,16,否,是,最完整，覆盖策略、算法改进和仿真验证三层贡献。,3eefa2bbd87e480b85688c5200afba87_Q01_full.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q02,方法,global,global,success,论文的方法主线可以分成哪几步？,,"论文的方法主线可以分为以下三步：
+
+1. **生物启发策略分析**：基于动物（如 Harris’ hawks）的合作捕猎行为，提出了一种生物启发的目标包围策略，强调了领导者的作用和包围形状的形成机制。
+
+2. **设计航向刚度框架**：利用图论中的 Laman 图和 Henneberg 操作等概念，设计了一个基于航向信息的包围框架，确保包围形状能够唯一确定。
+
+3. **提出基于航向的控制律**：针对静态和移动目标，设计了基于航向信息和单一距离测量的控制律，使无人机能够形成预定形状和尺寸的包围结构。
+
+**总结**：论文的方法主线包括从生物行为中提取策略、设计基于航向的包围框架，以及提出相应的控制律，以实现无人机群对目标的有效包围。",102.209,,3,3,2,3,11,否,不适用,答到了“变编队+改进PIO”，但“传统方法未针对控制参数优化”表述偏强，证据感一般。,3eefa2bbd87e480b85688c5200afba87_Q02_global.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q02,方法,section_only,section_only,success,论文的方法主线可以分成哪几步？,III. PRELIMINARIES AND PROBLEM FORMULATION | IV. BIOINSPIRED BEARING–BASED TARGET ENCLOSING CONTROL METHOD | A. Numerical Simulations,"论文的方法主线可分为以下四步：
+
+1. **生物启发策略的形成**：基于动物合作狩猎行为，提出生物启发的包围策略，确保包围编队的形状唯一由方位角信息确定。
+2. **方位角刚度框架的设计**：设计仅依赖方位角信息的包围编队形状确定框架，确保编队形状唯一。
+3. **基于方位角的控制律提出**：利用方位角信息和单个距离测量，提出适用于静态和移动目标的包围控制律，实现预定形状和尺寸的包围编队。
+4. **数值模拟验证**：通过仿真验证控制方法的有效性，展示包围过程中的飞行轨迹、速度、距离和方位角误差等结果。
+
+**证据**：  
+- 摘要提到“分析合作狩猎行为，形成生物启发策略”和“提出控制方法”。  
+- IV部分明确描述了框架设计和控制律的提出。  
+- A部分展示了数值模拟的结果，验证了方法的有效性。",113.833,,4,4,4,4,16,否,是,较完整地区分了传统固定编队与本文变编队、传统PIO与改进PIO。,3eefa2bbd87e480b85688c5200afba87_Q02_section_only.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q02,方法,full,full,success,论文的方法主线可以分成哪几步？,III. PRELIMINARIES AND PROBLEM FORMULATION | IV. BIOINSPIRED BEARING–BASED TARGET ENCLOSING CONTROL METHOD | A. Numerical Simulations,"论文的方法主线可分为以下四步：
+
+1. **分析生物行为并提出包围策略**：基于观察到的动物合作狩猎行为，论文提出了一种生物启发的包围策略，旨在模拟动物群体的协作机制（摘要）。
+
+2. **设计航向角刚度框架**：为确保包围形状仅由航向角信息唯一确定，论文设计了一个航向角刚度框架，利用航向角信息来定义包围形成的几何特性（IV.A）。
+
+3. **提出基于航向角和距离的控制律**：基于航向角刚度框架，论文提出了控制律，使用航向角信息和领导者无人机对目标的单一距离测量，引导所有无人机形成预定形状和大小的包围（IV.A）。
+
+4. **验证方法的有效性**：通过数值模拟和实验验证，论文证明了所提出控制方法能够实现对静态和移动目标的包围，且保持预定形状和尺寸（摘要和A部分）。
+
+**证据**：摘要和IV.A部分明确描述了从生物行为分析到策略设计、控制律提出及验证的完整方法流程。",174.785,,4,4,4,4,16,否,是,与section_only同样扎实，且对第4节和5.1节的联系更自然。,3eefa2bbd87e480b85688c5200afba87_Q02_full.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q03,实验,global,global,success,论文的实验主要想验证什么？,,根据论文聚焦上下文，摘要中提到：“The effectiveness of the proposed control method is substantiated through the results of both numerical simulations and experimental verification.” 这表明论文的实验部分旨在验证所提出的控制方法的有效性。然而，上下文并未提供关于实验设计、实验结果或具体验证内容的详细信息。因此，无法确定实验具体验证了哪些方面。,50.543,,2,1,2,1,6,是,不适用,只答出“验证有效性”，但没抓住作者为何先做不带优化、再做带优化仿真的设计意图。,3eefa2bbd87e480b85688c5200afba87_Q03_global.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q03,实验,section_only,section_only,success,论文的实验主要想验证什么？,B. Experimental Verification | V. SIMULATION AND EXPERIMENT | III. PRELIMINARIES AND PROBLEM FORMULATION,"根据论文聚焦上下文，实验的主要目的是验证所提出的仿生航向感知包围控制方法的有效性。具体来说：
+
+1. **验证方法的有效性**：实验通过构建多旋翼平台并进行户外实验，验证了控制方法在实际环境中的有效性。
+2. **验证不同场景**：实验涵盖了静态目标和移动目标的包围任务，并模仿了动物捕猎行为（如哈里斯鹰和狮子捕猎）中的包围模式（扩展和收缩）。
+3. **考虑实际限制**：实验中考虑了通信限制（Xbee网络的非全连接特性）和控制延迟（使用运动模型模拟延迟）。
+
+因此，论文的实验主要想验证所提出的仿生航向感知包围控制方法在实际环境中的有效性，包括其在静态和移动目标包围任务中的表现，以及对控制延迟和通信限制的适应性。",78.675,,4,4,3,4,15,否,是,基本答对：先验证变编队策略，再为后续参数优化提供依据；细节略有推断成分。,3eefa2bbd87e480b85688c5200afba87_Q03_section_only.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q03,实验,full,full,success,论文的实验主要想验证什么？,B. Experimental Verification | V. SIMULATION AND EXPERIMENT | III. PRELIMINARIES AND PROBLEM FORMULATION,"论文的实验主要想验证所提出的生物启发式航向角控制方法的有效性。具体而言，实验旨在验证以下内容：
+
+1. **控制方法的有效性**：通过仿真和实验，验证该方法能否利用航向角信息和单一距离测量，实现预定的包围形状和尺寸。
+2. **不同目标场景的适应性**：实验涵盖了静态和移动目标的包围场景，验证方法在不同目标运动状态下的有效性。
+3. **包围模式的动态变化**：实验重点验证了无人机群能否模仿生物捕猎行为，实现包围模式的扩展和收缩。
+
+实验通过构建多旋翼平台并进行户外测试，结合仿真结果，证明了方法的可行性。",66.221,,4,4,4,4,16,否,是,最贴近5.1节原文，准确指出两组实验分别服务于“验证策略有效性”和“评估优化参数作用”。,3eefa2bbd87e480b85688c5200afba87_Q03_full.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q04,公式,global,global,success,控制律每个变量的具体含义是什么？,,"好的，我们来解释一下论文中提出的静态目标包围控制律（公式(11)）中每个变量的具体含义。
+
+根据论文第 IV. B. 节的内容片段：
+
+**控制律 (11)：**
+$$\mathbf { v } _ { c , 1 } = - K _ { \mathrm{t} } P _ { \mathbf { g } _ { 1 t } } \mathbf { g } _ { 1 t } ^ { * } + K _ { d } \delta _ { 1 } \mathbf { g } _ { 1 t}\tag{11}$$
+
+**变量解释：**
+
+1.  **$\mathbf { v } _ { c , 1 }$**：这是**领导者无人机1的速度控制输入**。根据论文第 V. A. 节的运动模型(3)，$\dot{\mathbf{p}}_1 = \mathbf{v}_{c,1}$，所以这个向量决定了领导者无人机1将如何移动以实现包围。
+2.  **$K_{\mathrm{t}}$**：这是**朝向目标的包围控制增益**。这是一个可调参数，用于控制领导者无人机对目标方向的响应强度。它的值影响着领导者无人机试图调整自身位置以形成期望包围形状的“力度”。
+3.  **$P_{\mathbf { g } _ { 1 t }}$**：这是**一个投影算子**。它将向量 $\mathbf { g } _ { 1 t } ^ { * }$ 投影到与视线向量 $\mathbf { g } _ { 1 t }$ 垂直的子空间上。论文第 III. B. 节提到“Interactions among agents are described by...”，虽然未提取到足够定义，但结合上下文，$\mathbf { g } _ { 1 t }$ 很可能是从无人机1指向目标t的视线向量。$P_{\mathbf { g } _ { 1 t }}$ 确保控制输入 $\mathbf { v } _ { c , 1 }$ 的方向与 $\mathbf { g } _ { 1 t }$ 垂直，这通常是为了调整位置而不是直接朝向或远离目标。
+4.  **$\mathbf { g } _ { 1 t } ^ { * }$**：这是**期望的视线向量**。根据论文第 V. B. 节的描述，这个向量代表了在期望的包围形状下，领导者无人机1相对于目标t应有的视线方向（即从目标指向无人机1的方向，或者反之，需要根据上下文推断其具体指向和定义）。它定义了期望包围形状中领导者与目标之间的几何关系。
+5.  **$K_{d}$**：这是**距离控制增益**。另一个可调参数，用于控制领导者无人机对距离信息的响应强度。
+6.  **$\delta _ { 1 }$**：这是**领导者无人机1到目标t的实际距离**。论文第 IV. B. 节提到“Only the leader UAV can sense its distance to the target.”，所以 $\delta _ { 1 }$ 是领导者无人机1能够直接测量到的与目标的距离。
+7.  **$\mathbf { g } _ { 1 t }$**：这是**实际的视线向量**。同样，这很可能是指从无人机1指向目标t的向量（或从目标指向无人机1的向量，具体方向需要根据公式中的负号和物理意义推断）。它表示当前时刻无人机1到目标t的视线方向。
+
+**总结：**
+
+这个控制律（11）的作用是计算领导者无人机1的速度控制指令 $\mathbf { v } _ { c , 1 }$。该指令由两部分组成：
+
+1.  **第一项**：$- K _ { \mathrm{t} } P _ { \mathbf { g } _ { 1 t } } \mathbf { g } _ { 1 t } ^ { * }$。这部分使用期望的视线方向 $\mathbf { g } _ { 1 t } ^ { * }$，但通过投影算子 $P_{\mathbf { g } _ { 1 t }}$ 确保控制力方向垂直于当前视线 $\mathbf { g } _ { 1 t }$，并乘以控制增益 $K_{\mathrm{t}}$。这引导领导者无人机1调整位置，使其视线方向逐渐接近期望的 $\mathbf { g } _ { 1 t } ^ { * }$，从而形成期望的包围形状。
+2.  **第二项**：$K _ { d } \delta _ { 1 } \mathbf { g } _ { 1 t }$。这部分使用实际距离 $\delta _ { 1 }$ 和实际视线向量 $\mathbf { g } _ { 1 t }$，乘以距离控制增益 $K_{d}$。这根据与目标的距离调整速度，可能用于维持包围的尺寸或调整朝向。
+
+通过调整 $K_{\mathrm{t}}$ 和 $K_{d}$ 这两个增益参数，可以改变控制律对形状和距离的响应强度，从而实现不同的包围效果。",247.542,,3,4,2,3,12,否,不适用,解释较详细，但把δ1说成“实际距离”而非距离误差，部分变量含义有过度延伸。,3eefa2bbd87e480b85688c5200afba87_Q04_global.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q04,公式,section_only,section_only,success,控制律每个变量的具体含义是什么？,B. Bearing-Based UAV Target Enclosing Control Law | C. Convergence Analysis | V. SIMULATION AND EXPERIMENT,"控制律（公式（11））中每个变量的含义如下：
+
+- **v_{c,1}**：领导者UAV的速度控制输入向量，用于调节其运动方向和速度。
+- **K_t**：轴承控制增益，用于调节领导者与目标之间轴承关系的收敛速度。
+- **P_{g_{1t}}**：投影算子，将向量g_{1t}投影到与自身垂直的方向。
+- **g_{1t}**：从领导者到目标的单位向量，表示当前方向。
+- **g_{1t}^***：期望的单位向量，表示目标与领导者之间期望的轴承方向。
+- **K_d**：距离控制增益，用于调节距离误差的收敛速度。
+- **δ_1**：距离误差，定义为||p_t - p_1|| - r_d，其中p_t是目标位置，p_1是领导者位置，r_d是期望的距离。
+
+该控制律通过轴承控制项和距离控制项共同作用，确保领导者UAV的运动满足期望的包围形状和尺寸。",146.039,,4,3,4,4,15,否,是,对公式(11)核心变量解释最稳，简洁但基本准确。,3eefa2bbd87e480b85688c5200afba87_Q04_section_only.json,
+3eefa2bbd87e480b85688c5200afba87,Bioinspired Bearing–Based Target Enclosing Control for Unmanned Aerial Vehicle Swarm,Q04,公式,full,full,success,控制律每个变量的具体含义是什么？,B. Bearing-Based UAV Target Enclosing Control Law | C. Convergence Analysis | V. SIMULATION AND EXPERIMENT,"好的，基于提供的上下文，以下是控制律中每个变量的具体含义：
+
+1.  **$\mathbf { v } _ { c , 1 }$**： 领导无人机的速度控制输入向量。
+2.  **$K _ { \mathrm{t} }$**： 目标方向的控制增益。这个增益决定了无人机对目标方向信息的响应强度。
+3.  **$P _ { \mathbf { g } _ { 1 t } }$**： 投影算子。这个算子确保控制输入 $\mathbf { v } _ { c , 1 }$ 的方向与单位向量 $\mathbf { g } _ { 1 t } ^ { * }$ 一致。
+4.  **$\mathbf { g } _ { 1 t } ^ { * }$**： 领导无人机到目标的单位方向向量。
+5.  **$K _ { d }$**： 距离控制增益。这个增益决定了无人机对自身到目标距离误差 $\delta _ { 1 }$ 的响应强度。
+6.  **$\delta _ { 1 }$**： 领导无人机到目标的距离误差。定义为 $\delta _ { 1 } = \left\| \mathbf { p } _ { t } - \mathbf { p } _ { 1 } \right\| - r _ { d }$，其中 $\mathbf { p } _ { t }$ 是目标位置，$\mathbf { p } _ { 1 }$ 是领导无人机位置，$r _ { d }$ 是期望的包围半径。
+7.  **$\mathbf { v } _ { c , i }$**： 第 $i$ 架（非领导）无人机的速度控制输入向量。
+8.  **$K _ { \mathrm{f} }$**： 相对其他无人机的控制增益。这个增益决定了无人机对其他无人机位置信息的响应强度。
+9.  **$\sum _ { ( i , j ) \in \mathcal { E } } ^ { j \neq t }$**： 对所有与无人机 $i$ 相连（在连接图 $\mathcal { E }$ 中）且 $j$ 不是目标的无人机 $j$ 的求和。这里的 $t$ 可能是笔误或特定指代，但从上下文看，求和是对所有邻居无人机进行的，不涉及目标。
+10. **$P _ { \mathbf { g } _ { i j } }$**： 投影算子。作用于无人机 $i$ 到其邻居无人机 $j$ 的单位方向向量 $\mathbf { g } _ { i j } ^ { * }$。
+11. **$\mathbf { g } _ { i j } ^ { * }$**： 无人机 $i$ 到其邻居无人机 $j$ 的单位方向向量。
+
+这些定义直接来自公式(11)和(12)及其紧随其后的解释性文字。",258.372,,3,4,2,3,12,否,是,覆盖变量更多，但对投影算子和期望方向的解释不够严谨，证据支撑弱于section_only。,3eefa2bbd87e480b85688c5200afba87_Q04_full.json,
